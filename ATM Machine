@@ -1,0 +1,38 @@
+balance = 1000
+pin = 1234
+print("ATM Withdrawal")
+def __init__ (self,pin,balance,deposit):
+    self.__pin = pin
+    self.__balance = balance
+    self.__deposit = deposit
+n= int(input("Enter the ATM pin: "))
+if n == 1234:
+ while True:
+    print('''\n 1.Balance
+2.deposit
+3.withdrawal
+4.exit''')
+    choice = int(input("enter the choice"))
+    if choice == 1:
+     print("your balance is",balance)
+    elif choice == 2:
+        amt=int(input("enter the amount to deposit"))
+        if amt<100:
+            print("Minimun deposit is 100 rs")
+        else:
+            balance +=amt
+            print("you have successfully deposited",balance)
+    elif choice == 3:
+      withdrawal = int(input("enter the amount"))
+      if balance < withdrawal:
+                print("insufficient balance")
+      else:
+       balance -= withdrawal
+       print("you have successfully withdrawn",balance)
+    elif choice == 4:
+       print("Thank you for visiting")
+       break
+    else:
+       print("invalid choice")
+else:
+    print("invalide pin")
